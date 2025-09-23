@@ -22,7 +22,7 @@ class LoginActivity : AppCompatActivity() {
             val password = etPassword.text.toString()
 
             if (username == "admin" && password == "123") {
-                startActivity(Intent(this, MainActivity::class.java))
+                startActivity(Intent(this, beranda::class.java))
                 finish()
             } else {
                 Toast.makeText(this, "Login gagal!", Toast.LENGTH_SHORT).show()

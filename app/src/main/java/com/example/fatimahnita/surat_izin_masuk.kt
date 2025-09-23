@@ -1,5 +1,7 @@
 package com.example.fatimahnita
 
+import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -20,7 +22,10 @@ class SuratIzinActivity : AppCompatActivity() {
             val ket = etKeterangan.text.toString()
 
             if (nama.isNotEmpty() && ket.isNotEmpty()) {
-                Toast.makeText(this, "Surat izin untuk $nama berhasil dikirim", Toast.LENGTH_LONG).show()
+                val resultIntent = Intent(this, SuratListActivity::class.java)
+                resultIntent.putExtra("nama", nama)
+                resultIntent.putExtra("keterangan", ket)
+                setResult(Activity.RESULT_OK, resultIntent)
                 finish()
             } else {
                 Toast.makeText(this, "Isi semua field dulu!", Toast.LENGTH_SHORT).show()

@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Fatimahnita"
         tools:targetApi="31">
         <activity
+            android:name=".SuratListActivity"
+            android:exported="false" />
+        <activity
             android:name=".SuratIzinActivity"
             android:exported="false" />
         <activity

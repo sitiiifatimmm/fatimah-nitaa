@@ -3,6 +3,7 @@ package com.example.fatimahnita
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -10,9 +11,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        Handler().postDelayed({
+        val btn: Button = findViewById(R.id.btnLogin)
+
+        btn.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
             finish()
-        }, 2000) // 2 detik
+        }
     }
 }
