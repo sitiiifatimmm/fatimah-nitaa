@@ -14,14 +14,14 @@ class SuratAdapter(
 ) : RecyclerView.Adapter<SuratAdapter.SuratViewHolder>() {
 
     class SuratViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvNama: TextView = itemView.findViewById(R.id.tvNama)
-        val tvKeterangan: TextView = itemView.findViewById(R.id.tvKeterangan)
-        val btnEdit: Button = itemView.findViewById(R.id.btnEdit)
-        val btnHapus: Button = itemView.findViewById(R.id.btnHapus)
+        val tvNama: TextView = itemView.findViewById(R.id.etNama)
+        val tvKeterangan: TextView = itemView.findViewById(R.id.etKeterangan)
+        val btnEdit: Button = itemView.findViewById(R.id.btnKirim)
+        val btnHapus: Button = itemView.findViewById(R.id.btnLogout)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SuratViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.activity_surat_list, parent, false)
         return SuratViewHolder(view)
     }
 

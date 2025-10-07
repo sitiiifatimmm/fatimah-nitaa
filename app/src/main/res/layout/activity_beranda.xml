@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     tools:context=".beranda"
     android:id="@+id/main"
+    android:orientation="vertical"
     android:padding="20dp"
     android:background="#2196F3">
 
@@ -16,7 +16,7 @@
         android:text="Selamat Datang di Aplikasi Surat Izin Masuk"
         android:textSize="18sp"
         android:textStyle="bold"
-        android:padding="8dp"/>
+        android:padding="8dp" />
 
     <Button
         android:id="@+id/btnSuratIzin"
@@ -25,7 +25,7 @@
         android:text="Buat Surat Izin Masuk"
         android:backgroundTint="#0D47A1"
         android:textColor="@android:color/white"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
 
     <Button
         android:id="@+id/btnLogout"
@@ -34,6 +34,29 @@
         android:text="Logout"
         android:backgroundTint="#3A76D0"
         android:textColor="@android:color/white"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp" />
+
+    <!-- ✅ Tambahan: Daftar surat izin -->
+    <TextView
+        android:id="@+id/tvDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Daftar Surat Izin Anda:"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="24dp"
+        android:paddingBottom="8dp" />
+
+    <ListView
+        android:id="@+id/listViewSurat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:dividerHeight="8dp"
+        android:background="@android:color/white"
+        android:padding="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp" />
 
 </LinearLayout>

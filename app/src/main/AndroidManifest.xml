@@ -12,31 +12,27 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Fatimahnita"
         tools:targetApi="31">
-
         <activity
             android:name=".surat_list"
             android:exported="false" />
-
         <activity
             android:name=".surat_izin_masuk"
             android:exported="false" />
-
         <activity
             android:name=".beranda"
             android:exported="false" />
-
         <activity
             android:name=".login"
             android:exported="false" />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
+
 </manifest>
