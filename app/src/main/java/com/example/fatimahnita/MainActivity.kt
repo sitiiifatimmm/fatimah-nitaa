@@ -2,7 +2,6 @@ package com.example.fatimahnita
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -11,11 +10,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btn: Button = findViewById(R.id.btnLogin)
+        val btnLogin: Button = findViewById(R.id.btnLogin)
 
-        btn.setOnClickListener {
-            startActivity(Intent(this, LoginActivity::class.java))
-            finish()
+        btnLogin.setOnClickListener {
+            val intent = Intent(this, login::class.java)
+            startActivity(intent)
+            finish() // jika kamu ingin MainActivity ditutup setelah pindah
         }
     }
 }
